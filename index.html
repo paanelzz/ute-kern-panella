@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="it" data-lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ute Kern Panella – La Via degli uccelli. Acquerelli su carta. Lugano.">
+<title>Ute Kern Panella</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: one long sheet of paper — drawings float in open space, text set like a quiet exhibition catalogue */
+:root{
+  --paper:#F1F1EE; --sheet:#FAFAF8; --ink:#25282B; --graphite:#6A6E70; --rule:#D9DAD5; --accent:#2F4A78;
+  --display:"Cormorant","Cormorant Garamond",Georgia,serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --label:"Jost","Helvetica Neue",Arial,sans-serif;
+  --blend:multiply;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#17191B; --sheet:#202326; --ink:#E9E7E2; --graphite:#A3A6A6; --rule:#33373A; --accent:#A9BCE0; --blend:normal; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#17191B; --sheet:#202326; --ink:#E9E7E2; --graphite:#A3A6A6; --rule:#33373A; --accent:#A9BCE0; --blend:normal; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.075rem;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+:root[data-lang="it"] .en,:root[data-lang="en"] .it{display:none!important}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid transparent}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.mark{font-family:var(--display);font-size:1.35rem;letter-spacing:.02em;text-decoration:none}
+nav{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+nav a,.lang button{font-family:var(--label);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--graphite)}
+nav a:hover{color:var(--ink)}
+.lang{display:flex;gap:2px}
+.lang button{background:none;border:0;padding:4px 6px;cursor:pointer}
+.lang button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(32px,7vw,96px) clamp(24px,5vw,64px)}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(3rem,8vw,6.4rem);line-height:.92;margin:0 0 24px;letter-spacing:-.01em;text-wrap:balance}
+.hero h1 em{display:block;font-style:italic;color:var(--accent)}
+.eyebrow{font-family:var(--label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--graphite);margin:0 0 18px}
+.hero p.lead{font-size:1.25rem;max-width:30ch;margin:0;font-style:italic;font-weight:300}
+.hero figure{margin:0;min-width:0}
+.hero img{width:100%;height:auto;display:block;mix-blend-mode:var(--blend)}
+
+/* sections */
+section{padding-block:clamp(48px,8vw,104px);border-top:1px solid var(--rule)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(24px,4vw,48px)}
+h2{font-family:var(--display);font-weight:300;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;margin:0;text-wrap:balance}
+h3{font-family:var(--display);font-weight:400;font-style:italic;font-size:1.7rem;margin:0}
+.note{font-family:var(--label);font-size:.78rem;letter-spacing:.06em;color:var(--graphite);margin:0}
+
+/* works */
+.family{margin-bottom:clamp(40px,6vw,72px)}
+.family:last-child{margin-bottom:0}
+.family header{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+.family header .count{font-family:var(--label);font-size:.72rem;letter-spacing:.14em;color:var(--graphite);font-variant-numeric:tabular-nums}
+.grid{columns:3 260px;column-gap:clamp(14px,2vw,24px)}
+.grid button{display:block;width:100%;margin:0 0 clamp(14px,2vw,24px);padding:0;border:0;background:var(--sheet);cursor:zoom-in;break-inside:avoid;
+  box-shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px -12px rgba(0,0,0,.18);transition:transform .4s ease}
+.grid button:hover{transform:translateY(-3px)}
+@media (prefers-reduced-motion:reduce){.grid button{transition:none}.grid button:hover{transform:none}}
+.grid img{display:block;width:100%;height:auto}
+.grid figcaption{font-family:var(--label);font-size:.7rem;letter-spacing:.08em;color:var(--graphite);text-align:left;padding:10px 12px 12px}
+
+/* light strip */
+.strip{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+.strip img{height:clamp(260px,42vw,460px);width:auto;flex:none;scroll-snap-align:start;display:block}
+
+/* texts */
+.text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,5vw,72px)}
+.text .side{min-width:0}
+.text .body{min-width:0;max-width:62ch}
+.body p{margin:0 0 1.05em}
+.body p.pull{font-family:var(--display);font-style:italic;font-weight:300;font-size:1.9rem;line-height:1.25;margin:.4em 0 1em;color:var(--accent);text-wrap:balance}
+.body .sign{font-family:var(--label);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--graphite)}
+.side .stick{position:sticky;top:96px}
+.side img{width:100%;max-width:340px;height:auto;display:block;mix-blend-mode:var(--blend)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,5vw,72px);align-items:start}
+.about img{width:100%;height:auto;display:block}
+.about figure{margin:0}
+.about figcaption{font-family:var(--label);font-size:.7rem;letter-spacing:.08em;color:var(--graphite);margin-top:8px}
+.cv{margin-top:40px}
+.cv h3{font-size:1.35rem;margin:28px 0 10px}
+.cv ol{list-style:none;margin:0;padding:0}
+.cv li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:12px;padding:9px 0;border-top:1px solid var(--rule);font-size:.98rem}
+.cv li .y{font-family:var(--label);font-size:.8rem;color:var(--graphite);font-variant-numeric:tabular-nums;padding-top:3px}
+.cv li b{font-weight:400;font-variant:small-caps;letter-spacing:.04em}
+.cv li span.v{color:var(--graphite)}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:clamp(24px,6vw,96px);align-items:flex-end}
+.contact .big{font-family:var(--display);font-size:clamp(1.6rem,4.5vw,2.8rem);font-weight:300;user-select:all;word-break:break-word}
+.copy{font-family:var(--label);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;background:none;border:1px solid var(--rule);color:var(--ink);padding:8px 14px;cursor:pointer;margin-top:10px}
+footer{padding-block:32px 48px;border-top:1px solid var(--rule)}
+footer p{font-family:var(--label);font-size:.72rem;letter-spacing:.08em;color:var(--graphite);margin:0}
+
+/* lightbox */
+dialog{border:0;padding:0;background:var(--paper);color:var(--ink);max-width:100vw;max-height:100vh;width:100vw;height:100vh;margin:0}
+dialog::backdrop{background:var(--paper)}
+.lb{height:100%;display:grid;grid-template-rows:1fr auto;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb .stage{min-height:0;display:flex;align-items:center;justify-content:center}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.lb .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;flex-wrap:wrap}
+.lb .cap{font-family:var(--label);font-size:.78rem;letter-spacing:.08em;color:var(--graphite)}
+.lb .ctrl{display:flex;gap:6px}
+.lb .ctrl button{font-family:var(--label);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;background:none;border:1px solid var(--rule);color:var(--ink);padding:8px 14px;cursor:pointer}
+
+@media (max-width:760px){
+  .hero,.text,.about{grid-template-columns:1fr}
+  .hero figure{order:-1}
+  .side .stick{position:static}
+  .side img{max-width:220px}
+  nav{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Ute Kern Panella</a>
+    <nav aria-label="Sezioni">
+      <a href="#opere"><span class="it">Opere</span><span class="en">Works</span></a>
+      <a href="#luce"><span class="it">Luce</span><span class="en">Light</span></a>
+      <a href="#via"><span class="it">Testo</span><span class="en">Statement</span></a>
+      <a href="#ute"><span class="it">Biografia</span><span class="en">About</span></a>
+      <a href="#contatti"><span class="it">Contatti</span><span class="en">Contact</span></a>
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button type="button" id="btn-it" data-set="it">IT</button>
+        <button type="button" id="btn-en" data-set="en">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow"><span class="it">Acquerelli su carta · 2026</span><span class="en">Watercolours on paper · 2026</span></p>
+      <h1>Ute Kern Panella <em class="it">La Via degli uccelli</em><em class="en">The Way of Birds</em></h1>
+      <p class="lead"><span class="it">Vi sono correnti invisibili. E gli uccelli le attraversano seguendo minime variazioni, della luce e dell’aria.</span><span class="en">There are invisible currents. Birds move through them, following subtle shifts in light and air.</span></p>
+    </div>
+    <figure><img src="img/rondine-volo.jpg" alt="Acquerello: una rondine in volo, ali aperte e coda biforcuta" width="1125" height="1500"></figure>
+  </div>
+
+  <section id="opere">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="it">Opere</span><span class="en">Works</span></h2>
+        <p class="note"><span class="it">Acquerello su carta</span><span class="en">Watercolour on paper</span></p>
+      </div>
+      <div id="families"></div>
+    </div>
+  </section>
+
+  <section id="luce">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="it">Nella luce dello studio</span><span class="en">In the studio light</span></h2>
+        <p class="note"><span class="it">Lugano</span><span class="en">Lugano</span></p>
+      </div>
+      <div class="strip" id="strip" tabindex="0" aria-label="Fotografie dello studio"></div>
+    </div>
+  </section>
+
+  <section id="via">
+    <div class="wrap text">
+      <div class="side"><div class="stick"><img src="img/stesso-vento.jpg" alt="Acquerello: un airone dorato in piedi sull'acqua con il suo riflesso grigio" width="1449" height="1500"><p class="note" style="margin-top:8px"><span class="it">Nello stesso vento</span><span class="en">In the same wind</span></p></div></div>
+      <div class="body">
+        <h2 style="margin-bottom:32px"><span class="it">La Via degli uccelli</span><span class="en">The Way of Birds</span></h2>
+        <div class="it">
+          <p>Vi sono correnti invisibili.</p>
+          <p>E gli uccelli le attraversano seguendo minime variazioni, della luce e dell’aria. Si muovono tra terra e cielo, tra presenza e distanza, affidandosi a qualcosa che noi non vediamo.</p>
+          <p>Già nelle antiche culture e nelle tradizioni sciamaniche, certi animali erano considerati vere guide spirituali: presenze potenti, messaggeri tra il visibile e l’invisibile capaci di accompagnare l’essere umano e di proteggerlo.</p>
+          <p>Essi ci appaiono nei sogni, nelle storie, nelle affinità improvvise. A volte li incontriamo semplicemente e, senza sapere perché, qualcosa in noi li riconosce.</p>
+          <p>L’animale guida non è qualcosa da possedere né un simbolo da decifrare. È una presenza da incontrare, con cui entrare in relazione: esso può apparire per un istante, lasciare una traccia, aprirci ad una domanda, suggerirci una risposta, un movimento.</p>
+          <p>La Via degli uccelli nasce da questo incontro.</p>
+          <p>Non è mio unico desiderio rappresentare gli uccelli, bensì avvicinarmi a ciò che la loro presenza evoca: il volo, la migrazione, il ritorno, il nido, la sospensione, la possibilità di cambiare rotta.</p>
+          <p>Gli uccelli sembra che conoscano vie che noi non vediamo, seguono correnti invisibili, si affidano all’aria, percepiscono variazioni quasi impercettibili. Nel loro movimento io vi riconosco una forma di orientamento che non passa necessariamente attraverso la ragione, bensì attraverso l’ascolto.</p>
+          <p>L’acquerello risponde a questo stesso ascolto. L’acqua porta il colore, lo disperde, lo lascia affiorare. La forma appare e si sottrae, rimane in bilico tra ciò che si riconosce e ciò che ancora non ha forma e nome.</p>
+          <p class="pull">Ogni foglio è una piccola soglia.</p>
+          <p>Un gesto che cerca la leggerezza ma senza negare la materia. Una traccia nell’aria. Una presenza che si manifesta e poi si dissolve. Un movimento che continua oltre il margine della carta.</p>
+          <p>Forse gli animali guida ci ricordano proprio questo, che non tutto ciò che ci orienta è visibile. Che possiamo imparare a fidarci di correnti sottili, di segnali quasi impercettibili, inaspettati, di qualcosa che ancora non sappiamo nominare.</p>
+          <p>Lasciare che il volo di un uccello ci pervada.</p>
+          <p>Accogliere per un istante il suo passaggio, senza trattenerlo, senza volerlo spiegare.</p>
+          <p>E, forse, riconoscere nel suo movimento qualcosa del nostro: tra ciò che lasciamo e ciò che ancora non conosciamo, tra il bisogno di una via e la libertà di cambiare rotta.</p>
+          <p class="sign">Ute Kern Panella, 2026</p>
+        </div>
+        <div class="en">
+          <p>There are invisible currents.</p>
+          <p>Birds move through them, following subtle shifts in light and air. They travel between earth and sky, between presence and distance, trusting something we cannot see.</p>
+          <p>In ancient cultures and shamanic traditions, certain animals were regarded as spiritual guides: powerful presences capable of accompanying human beings as protectors and messengers between the visible and the invisible.</p>
+          <p>They appear in dreams, in stories, in sudden affinities. At times, we simply encounter them and, without knowing why, something within us recognises them.</p>
+          <p>A spirit animal is not something to possess, nor a symbol to decipher. It is a presence to encounter, something with which to enter into relationship. It may appear for an instant, leaving a trace, opening a question, suggesting a movement.</p>
+          <p>The Way of Birds grows out of such an encounter.</p>
+          <p>I am not interested in depicting birds, but in approaching what their presence evokes: flight, migration, return, suspension, the possibility of changing course.</p>
+          <p>Birds seem to know pathways we cannot see. They follow invisible currents, trust the air, sense almost imperceptible changes. In their movement, I recognise a form of orientation that does not necessarily come through reason, but through listening.</p>
+          <p>Watercolour responds to this same act of listening. Water carries colour, disperses it, allows it to rise to the surface. Forms emerge and recede, remaining poised between what can be recognised and what has yet to be named.</p>
+          <p class="pull">Each painting is a small threshold.</p>
+          <p>A gesture seeking lightness without denying matter. A trace in the air. A presence that appears and then dissolves. A movement that continues beyond the edge of the paper.</p>
+          <p>Perhaps spirit animals remind us of this: that not everything that guides us can be seen. That we can learn to trust subtle currents, almost imperceptible signs, something we do not yet know how to name.</p>
+          <p>To let a bird pass through us.</p>
+          <p>To receive its passing for an instant, without holding on to it, without needing to explain it.</p>
+          <p>And perhaps to recognise, in its movement, something of our own: between what we leave behind and what we have yet to discover, between the need for a path and the freedom to change course.</p>
+          <p class="sign">Ute Kern Panella, 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guida">
+    <div class="wrap text">
+      <div class="side"><div class="stick"><img src="img/airone-volo.jpg" alt="Acquerello: un airone grigio-verde che prende il volo" width="1152" height="1500"></div></div>
+      <div class="body">
+        <h2 style="margin-bottom:12px">Animali guida</h2>
+        <p class="note en" style="margin-bottom:28px">Text in Italian</p>
+        <p class="note it" style="margin-bottom:28px">Spirit animals</p>
+        <p>Da sempre gli animali sono intesi come compagni dell’anima - guide, protettori e messaggeri che riflettono qualità che stiamo imparando a incarnare. L’animale spirito non è qualcosa da possedere, ma da incontrare: una presenza che appare nei sogni, si manifesta nelle affinità improvvise o in un riconoscimento silenzioso, aiutandoci ad affinare l’intuizione e ad attraversare il cambiamento.</p>
+        <p class="pull">Questo progetto si inaugura con gli uccelli.</p>
+        <p>Creature dell’aria e della soglia si muovono tra terra, acqua e cielo, portando con sé una percezione di prospettiva, transizione e consapevolezza. Incontrare un uccello come guida significa chiedersi cosa in noi desideri sollevarsi, migrare, tornare a cantare.</p>
+        <p>Gli uccelli abitano la liminalità, muovendosi lungo correnti invisibili e affidandosi alla sottigliezza dell’aria per orientarsi. Li percepisco come presenze che tracciano linee invisibili nello spazio, coordinate per un orientamento interiore.</p>
+        <p>Nel mio lavoro diventano materia sospesa, ritmo, scrittura nello spazio. Non cerco di rappresentarli, ma di evocare lo stato che incarnano. Le opere dedicate agli uccelli nascono da questo ascolto: come presenze di passaggio, invitano chi le osserva a percepire il proprio movimento, la propria migrazione.</p>
+        <p>Questa serie si presenta come un’estensione essenziale della mia ricerca sulla presenza, la soglia e l’orientamento interiore.</p>
+        <p>Gli uccelli non sono trattati come soggetti, ma come figure essenziali che tracciano direzioni sottili, quasi coordinate nello spazio. Attraverso l’acquerello su carta, la serie accoglie la leggerezza e la dispersione del gesto, permettendo alle forme di rimanere sospese, mai completamente fisse.</p>
+        <p>Questi lavori diventano silenziosi strumenti di orientamento. Non rappresentano il movimento, ma lo attivano, invitando chi guarda a percepire la propria posizione mutevole.</p>
+        <p>In dialogo con le mie installazioni, la serie riduce la stessa indagine a una scala essenziale, in cui un singolo gesto racchiude la tensione tra presenza e scomparsa.</p>
+        <p class="sign">Ute Panella, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ute">
+    <div class="wrap about">
+      <figure><img src="img/ute.jpg" alt="Ute Kern Panella seduta a gambe incrociate sul pavimento dello studio, in bianco e nero" width="994" height="1500" loading="lazy"><figcaption><span class="it">Ute nello studio</span><span class="en">Ute in the studio</span></figcaption></figure>
+      <div style="min-width:0">
+        <h2 style="margin-bottom:28px"><span class="it">Biografia</span><span class="en">About</span></h2>
+        <div class="body">
+          <p class="it">Ute Kern Panella è un’artista visiva che vive e lavora a Lugano. Si è formata tra Stoccarda e Londra, alla Free Art School, al London College of Fashion e alla Central Saint Martins (BA Fine Art). Il suo percorso attraversa le arti visive, la moda e il design calzaturiero, e la pratica e l’insegnamento dello yoga. Dal 2017 è artista in residenza presso la Fondazione Claudia Lombardi a Figino, Lugano.</p>
+          <p class="en">Ute Kern Panella is a visual artist who lives and works in Lugano. She trained in Stuttgart and London, at the Free Art School, the London College of Fashion and Central Saint Martins (BA Fine Art). Her path runs through visual art, fashion and footwear design, and the practice and teaching of yoga. Since 2017 she has been artist in residence at the Fondazione Claudia Lombardi in Figino, Lugano.</p>
+          <p><span class="it">Lingue: italiano, inglese, tedesco.</span><span class="en">Languages: English, Italian, German.</span></p>
+        </div>
+        <div class="cv" id="cv"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="it">Contatti</span><span class="en">Contact</span></h2></div>
+      <div class="contact">
+        <div>
+          <p class="eyebrow">Email</p>
+          <div class="big" id="mail">utepanella@gmail.com</div>
+          <button type="button" class="copy" id="copy-mail"><span class="it">Copia indirizzo</span><span class="en">Copy address</span></button>
+        </div>
+        <div>
+          <p class="eyebrow"><span class="it">Studio</span><span class="en">Studio</span></p>
+          <div class="big"><span class="it">Lugano, Svizzera</span><span class="en">Lugano, Switzerland</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><p>© 2026 Ute Kern Panella · <span class="it">Tutte le immagini sono opere dell’artista.</span><span class="en">All images are works by the artist.</span></p></div></footer>
+
+<dialog id="lb" aria-label="Opera">
+  <div class="lb">
+    <div class="stage"><img id="lb-img" alt=""></div>
+    <div class="bar">
+      <span class="cap" id="lb-cap"></span>
+      <div class="ctrl">
+        <button type="button" id="lb-prev" aria-label="Precedente">←</button>
+        <button type="button" id="lb-next" aria-label="Successiva">→</button>
+        <button type="button" id="lb-close"><span class="it">Chiudi</span><span class="en">Close</span></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const families=[
+  {it:"Colombe",en:"Doves",items:[
+    ["colomba-azzurra","Colomba in volo, azzurro e ocra","Dove in flight, blue and ochre"],
+    ["colomba-lilla","Colomba ad ali aperte, lilla e verde","Dove with open wings, lilac and green"],
+    ["colomba-blu","Colomba blu","Blue dove"],
+    ["colomba-profilo","Colomba di profilo","Dove in profile"],
+    ["colomba-bianca","Colomba bianca","White dove"],
+    ["colomba-grigia","Colomba grigia e ocra","Grey and ochre dove"],
+    ["colomba-chiara","Colomba chiara","Pale dove"]]},
+  {it:"Rondini",en:"Swallows",items:[
+    ["rondini","Due rondini sul ramo","Two swallows on a branch"],
+    ["rondine-volo","Rondine in volo","Swallow in flight"]]},
+  {it:"Aironi",en:"Herons",items:[
+    ["stesso-vento","Nello stesso vento","In the same wind"],
+    ["airone-volo","Airone in volo","Heron in flight"],
+    ["airone-blu","Airone blu","Blue heron"],
+    ["airone-riflesso","Airone e ombra","Heron and shadow"],
+    ["airone-verde","Airone sull'acqua verde","Heron on green water"]]},
+  {it:"Uccelli gialli",en:"Yellow birds",items:[
+    ["cardellino","Uccello giallo sul ramo","Yellow bird on a branch"],
+    ["giallo-volo","Uccello giallo in volo","Yellow bird in flight"],
+    ["gialli-coppia","Due uccelli gialli","Two yellow birds"],
+    ["gialli-bacio","Becco a becco","Beak to beak"],
+    ["giallo-sguardo","Sguardo all'indietro","Looking back"]]},
+  {it:"Uccelli rossi",en:"Red birds",items:[
+    ["rosso-posato","Uccello rosso sul ramo","Red bird on a branch"],
+    ["rosso-ramo","Uccello rosso sul tronco","Red bird on a twig"]]},
+  {it:"Upupa e altri voli",en:"Hoopoe and other flights",items:[
+    ["upupa","Upupa","Hoopoe"],
+    ["rapace","In discesa","Descending"],
+    ["picchiata","In picchiata","Diving"],
+    ["due-uccelli","Due uccelli","Two birds"],
+    ["due-blu","Due creature blu","Two blue creatures"],
+    ["uccello-bruno","Uccello bruno","Brown bird"],
+    ["creature","Strane creature","Strange creatures"]]}
+];
+const studio=["s-rondini","s-colomba-blu","s-upupa","s-colomba-bianca","s-gialli","s-colomba","s-upupa-2"];
+const cv={
+  ex:[["2024","KIMONO D’ARTISTE","FAF, Firenze","FAF, Florence","mostra collettiva e performance con artiste donne","group exhibition and performance with women artists"],
+      ["2024","STRANGE CREATURES / STRANE CREATURE","FAF, Firenze","FAF, Florence","mostra personale con installazione","solo installation exhibition"],
+      ["2023","UNA SERATA SBAGLIATA","Atelier Francesco di Gregorio, Lugano","Atelier Francesco di Gregorio, Lugano","mostra collettiva","group exhibition"],
+      ["2021","INTRECCI D’ARTE","Galleria privata, Mendrisio","Private gallery, Mendrisio","con Simona Bellini","with Simona Bellini"],
+      ["2019","LA RETE DI INDRA","Centro Culturale SGI, Milano Corsico","SGI Cultural Centre, Milano Corsico","installazione interattiva del collettivo Artisti Visivi","interactive installation by the Artisti Visivi collective"],
+      ["2017","VICINI DI CASA","Spazio 1B, Lugano","Spazio 1B, Lugano","mostra collettiva","group exhibition"],
+      ["2015","DRAWING BIENNIAL","The Drawing Room, Londra","The Drawing Room, London","",""],
+      ["2013","DRAWING BIENNIAL","The Drawing Room, Londra","The Drawing Room, London","",""],
+      ["2013","OPEN GALLERY LUGANO","Spazio Sonnenstube, Lugano","Spazio Sonnenstube, Lugano","mostra collettiva","group exhibition"],
+      ["2013","HUMMUS DANCE","Galleria privata, Mendrisio","Private gallery, Mendrisio","mostra collettiva","group exhibition"],
+      ["2011","FEMINIST ICONS","Londra","London","mostra collettiva","group exhibition"],
+      ["2011","DRAWING BIENNIAL","The Drawing Room, Londra","The Drawing Room, London","",""],
+      ["2011","UNCOMMON GROUND","Londra","London","mostra collettiva","group exhibition"],
+      ["2010","SHAPES","Covent Garden, Londra","Covent Garden, London","mostra collettiva","group exhibition"],
+      ["2009","END OF YEAR SHOW","Florence Trust, Londra","Florence Trust, London","",""],
+      ["2009","DEGREE SHOW","Central Saint Martins, Londra","Central Saint Martins, London","BA Fine Arts","BA Fine Arts"]],
+  com:[["2014","ALTA MAREA","Dicastero Arte e Cultura, Lugano","Dicastero Arte e Cultura, Lugano","installazione e disegno murale","installation and wall drawing"]],
+  res:[["2017–","FONDAZIONE CLAUDIA LOMBARDI","Figino, Lugano","Figino, Lugano","artista in residenza","artist in residence"],
+       ["2009–10","THE FLORENCE TRUST","Londra","London","residenza d’artista","artist residency"]],
+  edu:[["2002–09","CENTRAL SAINT MARTINS","Londra","London","BA Fine Art","BA Fine Art"],
+       ["1987–90","LONDON COLLEGE OF FASHION","Londra","London","BA Fashion Design / Shoe Design","BA Fashion Design / Shoe Design"],
+       ["1986–87","FREE ART SCHOOL","Stoccarda","Stuttgart","Foundation Course in Art and Design","Foundation Course in Art and Design"]]
+};
+const heads={ex:["Mostre","Exhibitions"],com:["Commissioni","Commissions"],res:["Residenze","Residencies"],edu:["Formazione","Education"]};
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const bi=(i,e)=>`<span class="it">${esc(i)}</span><span class="en">${esc(e)}</span>`;
+
+const flat=[];
+document.getElementById("families").innerHTML=families.map(f=>{
+  const cards=f.items.map(([src,ti,te])=>{const n=flat.push({src,ti,te,fi:f.it,fe:f.en})-1;
+    return `<button type="button" data-n="${n}" aria-label="${esc(ti)}"><img src="img/${src}.jpg" alt="Acquerello: ${esc(ti)}" loading="lazy"><figcaption>${bi(ti,te)}</figcaption></button>`}).join("");
+  return `<div class="family"><header><h3>${bi(f.it,f.en)}</h3><span class="count">${String(f.items.length).padStart(2,"0")}</span></header><div class="grid">${cards}</div></div>`;
+}).join("");
+document.getElementById("strip").innerHTML=studio.map(s=>`<img src="img/${s}.jpg" alt="Acquerello fotografato nella luce della finestra dello studio" loading="lazy">`).join("");
+document.getElementById("cv").innerHTML=Object.keys(heads).map(k=>`<h3>${bi(...heads[k])}</h3><ol>${cv[k].map(([y,t,vi,ve,di,de])=>`<li><span class="y">${y}</span><span><b>${esc(t)}</b><br><span class="v">${bi(vi+(di?" · "+di:""),ve+(de?" · "+de:""))}</span></span></li>`).join("")}</ol>`).join("");
+
+/* language */
+const root=document.documentElement;
+function setLang(l){root.dataset.lang=l;root.lang=l;
+  document.getElementById("btn-it").setAttribute("aria-pressed",l==="it");document.getElementById("btn-en").setAttribute("aria-pressed",l==="en");
+  try{localStorage.setItem("lang",l)}catch(e){}}
+let saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+setLang(saved==="en"?"en":"it");
+document.querySelectorAll("[data-set]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.set)));
+
+/* lightbox */
+const lb=document.getElementById("lb"),lbImg=document.getElementById("lb-img"),lbCap=document.getElementById("lb-cap");let cur=0;
+function show(n){cur=(n+flat.length)%flat.length;const w=flat[cur];lbImg.src=`img/${w.src}.jpg`;lbImg.alt=w.ti;
+  lbCap.innerHTML=`${bi(w.fi,w.fe)} — ${bi(w.ti,w.te)} · ${bi("acquerello su carta","watercolour on paper")}`}
+document.getElementById("families").addEventListener("click",e=>{const b=e.target.closest("button[data-n]");if(!b)return;show(+b.dataset.n);lb.showModal()});
+document.getElementById("lb-prev").onclick=()=>show(cur-1);
+document.getElementById("lb-next").onclick=()=>show(cur+1);
+document.getElementById("lb-close").onclick=()=>lb.close();
+lb.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")show(cur-1);if(e.key==="ArrowRight")show(cur+1)});
+lb.addEventListener("click",e=>{if(e.target.classList.contains("stage"))lb.close()});
+
+/* copy */
+document.getElementById("copy-mail").addEventListener("click",async e=>{const b=e.currentTarget;
+  try{await navigator.clipboard.writeText("utepanella@gmail.com");b.innerHTML=bi("Copiato","Copied")}
+  catch(err){const r=document.createRange();r.selectNodeContents(document.getElementById("mail"));const s=getSelection();s.removeAllRanges();s.addRange(r)}});
+</script>
+</body>
+</html>
